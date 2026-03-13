@@ -385,11 +385,8 @@ providing:
 # 📜 License
 
 © 2026 VisionGuide Research Team
-<<<<<<< HEAD
 
 Licensed under **MIT License**
-=======
->>>>>>> 6b79c6e2a39b3c5911795717b59032200932cdd1
 
 ------------------------------------------------------------------------
 
