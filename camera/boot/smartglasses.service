@@ -1,0 +1,15 @@
+[Unit]
+Description=Smart Glasses Service
+After=network.target sound.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/smart_glasses_pi_prod
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/pi/smart_glasses_pi_prod/.venv/bin/python /home/pi/smart_glasses_pi_prod/main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
