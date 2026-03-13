@@ -282,7 +282,7 @@ to improve mobility and independence for visually impaired individuals.
 
 # 📜 License
 
-MIT License
+© 2026 VisionGuide Research Team
 
 ------------------------------------------------------------------------
 
