@@ -1,6 +1,5 @@
 # 👓 VisionGuide -- AI Smart Glasses for Visually Impaired
 
-```{=html}
 <p align="center">
 ```
 ![Raspberry
@@ -9,7 +8,6 @@ Pi](https://img.shields.io/badge/Hardware-Raspberry%20Pi%204-red?style=for-the-b
 ![AI](https://img.shields.io/badge/AI-Computer%20Vision-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-```{=html}
 </p>
 ```
 
