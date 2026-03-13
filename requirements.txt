@@ -1,0 +1,7 @@
+picamera2
+numpy<2
+opencv-contrib-python==4.10.0.84
+pytesseract
+onnxruntime
+sounddevice
+scipy
