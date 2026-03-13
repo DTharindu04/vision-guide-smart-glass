@@ -1,89 +1,93 @@
-# 👓 Smart Glasses AI Assistant for Visually Impaired
+# 👓 VisionGuide -- AI Smart Glasses for Visually Impaired
 
-![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-4-red)
-![Python](https://img.shields.io/badge/Python-3.11-blue) ![Computer
-Vision](https://img.shields.io/badge/AI-Computer%20Vision-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+```{=html}
+<p align="center">
+```
+![Raspberry
+Pi](https://img.shields.io/badge/Hardware-Raspberry%20Pi%204-red?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI-Computer%20Vision-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-An **AI-powered Smart Glasses system** designed to assist visually
-impaired individuals using **Raspberry Pi 4**, **Computer Vision**, and
-**real‑time voice feedback**.
-
-The system detects **objects, faces, emotions, and text**, then converts
-them into **audio guidance** to help users understand their
-surroundings.
-
-------------------------------------------------------------------------
-
-# 🚀 Key Features
-
-### 🧍 Real-Time Object Detection
-
-Detects objects around the user and announces them via voice.
-
-Examples: - Person - Car - Bicycle - Chair - Door - Obstacles
-
-Example voice output: \> "Person detected ahead."
+```{=html}
+</p>
+```
 
 ------------------------------------------------------------------------
 
-### 😀 Face Detection & Recognition
+# 🌍 Project Overview
 
-Recognizes known individuals and alerts the user.
+**VisionGuide** is an **AI-powered smart glasses system** designed to
+assist **visually impaired individuals** by interpreting the surrounding
+environment and converting visual information into **real-time voice
+guidance**.
 
-Features: - Face enrollment system - Face database - Unknown person
-detection
+Using **Raspberry Pi, Computer Vision, and Artificial Intelligence**,
+the system can:
 
-Example outputs:
+-   👤 Recognize people
+-   🚶 Detect obstacles
+-   😊 Identify emotions
+-   📖 Read text
+-   🔊 Provide intelligent audio feedback
 
-> "Tharindu is in front of you."\
-> "Unknown person detected."
-
-------------------------------------------------------------------------
-
-### 😊 Emotion Detection
-
-Analyzes facial expressions.
-
-Supported emotions: - Happy - Sad - Angry - Neutral - Surprise
-
-Example:
-
-> "Tharindu looks happy."
+The goal is to **enhance independence and safety** for visually impaired
+users.
 
 ------------------------------------------------------------------------
 
-### 📖 OCR Text Reading
+# ❗ Problem Statement
 
-Reads text from the environment.
+According to the **World Health Organization**, over **285 million
+people worldwide** are visually impaired.
 
-Examples: - Signs - Books - Screens - Labels
+Visually impaired individuals face daily challenges such as:
 
-Example output:
+-   Navigating unfamiliar environments
+-   Avoiding obstacles
+-   Recognizing people
+-   Reading signs or text
+-   Understanding social interactions
 
-> "Text detected: Exit door."
+Existing assistive devices are often:
+
+-   ❌ Expensive
+-   ❌ Limited in functionality
+-   ❌ Not portable
+-   ❌ Not intelligent enough
+
+Therefore, there is a strong need for a **low-cost intelligent wearable
+system** that can help visually impaired people **perceive their
+surroundings more effectively**.
 
 ------------------------------------------------------------------------
 
-### 🔊 Intelligent Voice Feedback
+# 💡 Proposed Solution
 
-Smart voice system with:
+This project introduces **VisionGuide Smart Glasses**, a **multi-AI
+assistive system** that provides real-time environmental awareness.
 
--   Audio priority queue
--   Cooldown timers
--   Message formatting
--   Event-based announcements
+The system uses **computer vision and speech feedback** to assist users
+in understanding their surroundings.
 
-This prevents **repeated or unnecessary voice alerts**.
+The device can:
+
+✔ Detect objects around the user\
+✔ Recognize known individuals\
+✔ Identify emotions\
+✔ Read text from the environment\
+✔ Provide voice alerts and guidance
+
+All processing runs on a **Raspberry Pi 4 embedded system**.
 
 ------------------------------------------------------------------------
 
-# 🧠 AI Processing Workflow
+# 🧠 System Workflow
 
     Camera
        │
        ▼
-    Frame Buffer
+    Frame Capture
        │
        ▼
     Object Detection
@@ -109,11 +113,11 @@ This prevents **repeated or unnecessary voice alerts**.
        ▼
     Audio Queue
        ▼
-    TTS Engine
+    Voice Output
 
 ------------------------------------------------------------------------
 
-# 🏗 Project Architecture
+# 🏗 System Architecture
 
     smart_glasses/
     │
@@ -157,44 +161,142 @@ This prevents **repeated or unnecessary voice alerts**.
 
 ------------------------------------------------------------------------
 
+# 🚀 Key Features
+
+### 🧍 Real-Time Object Detection
+
+Detects surrounding objects such as:
+
+-   Person
+-   Car
+-   Bicycle
+-   Chair
+-   Door
+-   Obstacles
+
+Example voice output:
+
+> 🔊 "Person detected ahead."
+
+------------------------------------------------------------------------
+
+### 👤 Face Detection & Recognition
+
+The system recognizes **known individuals**.
+
+Features:
+
+-   Face enrollment
+-   Face database
+-   Unknown person detection
+
+Example output:
+
+> 🔊 "Tharindu is in front of you."
+
+or
+
+> 🔊 "Unknown person detected."
+
+------------------------------------------------------------------------
+
+### 😊 Emotion Detection
+
+Detects facial emotions:
+
+-   Happy
+-   Sad
+-   Angry
+-   Neutral
+-   Surprise
+
+Example:
+
+> 🔊 "Tharindu looks happy."
+
+------------------------------------------------------------------------
+
+### 📖 OCR Text Reading
+
+Reads text from the environment.
+
+Examples:
+
+-   Signs
+-   Books
+-   Labels
+-   Screens
+
+Example output:
+
+> 🔊 "Text detected: Exit door."
+
+------------------------------------------------------------------------
+
+### 🔊 Intelligent Voice Feedback
+
+Advanced voice system includes:
+
+-   Priority audio queue
+-   Cooldown timers
+-   Event-based speech
+-   Smart message formatting
+
+This prevents **repeated or unnecessary alerts**.
+
+------------------------------------------------------------------------
+
+# ⚙ Technology Stack
+
+  Component         Technology
+  ----------------- ------------------------------
+  Hardware          Raspberry Pi 4
+  Programming       Python 3.11
+  Computer Vision   OpenCV
+  AI Inference      ONNX Runtime
+  OCR               Tesseract
+  Voice Feedback    pyttsx3 / PicoTTS
+  Camera            Raspberry Pi Camera Module 2
+
+------------------------------------------------------------------------
+
 # 💻 Hardware Requirements
 
 -   🍓 Raspberry Pi 4
--   📷 Raspberry Pi Camera Module 2 (IMX219)
+-   📷 Raspberry Pi Camera Module 2
 -   🔋 Portable battery pack
--   🎧 Earphones / speaker
--   💾 32GB+ MicroSD card
+-   🎧 Earphones or speaker
+-   💾 MicroSD card (32GB+)
 
 ------------------------------------------------------------------------
 
 # 🖥 Software Requirements
 
--   Raspberry Pi OS (Bookworm)
--   Python 3.11
+-   Raspberry Pi OS **Bookworm**
+-   Python **3.11**
 -   OpenCV
--   ONNX Runtime
 -   NumPy
--   TTS engine (pyttsx3 / PicoTTS)
+-   ONNX Runtime
 
 ------------------------------------------------------------------------
 
-# ⚙️ Installation
+# ⚙ Installation
 
-Clone repository:
+Clone repository
 
 ``` bash
-git clone https://github.com/yourusername/smart-glasses-ai.git
-cd smart-glasses-ai
+git clone https://github.com/yourusername/visionguide-smart-glasses.git
+cd visionguide-smart-glasses
 ```
 
-Create virtual environment:
+Create virtual environment
 
 ``` bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Install dependencies:
+Install dependencies
 
 ``` bash
 pip install -r requirements.txt
@@ -202,7 +304,7 @@ pip install -r requirements.txt
 
 ------------------------------------------------------------------------
 
-# ▶️ Running the System
+# ▶ Running the System
 
 ``` bash
 python main.py
@@ -220,13 +322,13 @@ The system will begin:
 
 # 👤 Face Enrollment
 
-Add a new person:
+Add a new person
 
 ``` bash
 python training/enroll_faces.py --name "PersonName"
 ```
 
-Then build the face database:
+Then build the face database
 
 ``` bash
 python training/build_face_db.py
@@ -236,63 +338,67 @@ python training/build_face_db.py
 
 # 🔄 Auto Start on Raspberry Pi
 
-Enable automatic startup:
-
 ``` bash
 sudo bash boot/autostart_setup.sh
 ```
 
-This installs:
+This installs
 
     smartglasses.service
+
+so the system starts automatically when the Raspberry Pi boots.
 
 ------------------------------------------------------------------------
 
 # ⚡ Performance Optimizations
 
-This system uses:
+To run efficiently on Raspberry Pi, the system includes:
 
--   Multi‑threaded architecture
--   Frame skipping strategy
--   Event‑driven model activation
--   ROI based processing
+-   Multi-threaded architecture
+-   Frame skipping strategies
+-   ROI-based processing
+-   Event-driven model activation
 -   Priority speech queue
 
-These optimizations allow **smooth real‑time AI on Raspberry Pi**.
+These allow **smooth real-time AI processing on embedded hardware**.
 
 ------------------------------------------------------------------------
 
-# 🔬 Research Purpose
+# 🔬 Research Impact
 
-This project is developed as a **research assistive technology system**
-to improve mobility and independence for visually impaired individuals.
+This project contributes to **assistive technology research** by
+providing:
+
+-   A **low-cost AI wearable system**
+-   Real-time **environment awareness**
+-   **Improved mobility for visually impaired individuals**
 
 ------------------------------------------------------------------------
 
 # 🛣 Future Improvements
 
--   Sinhala voice feedback
--   Voice command control
--   Outdoor navigation assistance
--   Obstacle distance estimation
--   GPS navigation
--   Mobile companion app
+-   🇱🇰 Sinhala voice assistant
+-   🎤 Voice commands
+-   🧭 Navigation assistance
+-   📍 GPS integration
+-   📱 Mobile companion app
+-   🧠 Edge AI optimization
 
 ------------------------------------------------------------------------
 
 # 📜 License
 
-MIT License
+© 2026 VisionGuide Research Team
+
+Licensed under **MIT License**
 
 ------------------------------------------------------------------------
 
 # ❤️ Acknowledgements
 
-Special thanks to:
-
 -   Raspberry Pi Foundation
--   OpenCV community
--   ONNX Runtime
--   Open source AI researchers
+-   OpenCV Community
+-   ONNX Runtime Developers
+-   Open Source AI Research Community
 
 ------------------------------------------------------------------------
